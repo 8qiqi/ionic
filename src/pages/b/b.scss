@@ -1,0 +1,18 @@
+page-b {
+    // .sli{
+    //     height: 200px;
+    //     border: 1px solid red;
+    // }
+    ion-scroll{
+        height: 50px;
+        white-space: nowrap;
+        //不折行
+        span{
+            // float: left;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+        }
+        //span是行内样式，无法设置宽高，设置成块元素（block）又会浮动，所以设置成行内块元素
+    }
+}

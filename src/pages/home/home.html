@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-navbar color="yel">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title text-center><img src="../../assets/imgs/首页/桔家.png" style="width:15%;height:15%"></ion-title>
+      <button ion-button icon-only menuToggle end>
+        <ion-icon name="search"></ion-icon>
+      </button> 
+  </ion-navbar>
+</ion-header>
+<!-- <b #ac></b> -->
+<ion-content>
+  <ul class="navList">
+    <li class="first">推荐</li>
+    <li (click)=goTuijian()>家居</li>
+    <li>餐厨</li>
+    <li>床上用品</li>
+  </ul>
+  <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+    <ion-slide>
+      <img src="assets/imgs/首页/中心背景.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/首页/中心背景.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/首页/中心背景.png" alt="">
+    </ion-slide>
+  </ion-slides>
+  <div class="subtitle">
+      <h3 text-center>热|门|推|荐</h3>
+      <p text-center>RECOMMENDATION</p>
+  </div>
+  <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
+  <ul class="goods">
+        <li>
+          <img src="../assets/imgs/首页/置物架.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="../assets/imgs/首页/茶几.png" alt="">
+          <p>——简约黑檀木茶几——</p>
+          <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
+        </li>
+        <li>
+          <img src="../assets/imgs/首页/书架.png" alt="">
+          <p>——北欧白橡木书架——</p>
+          <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
+        </li>
+        <li>
+          <img src="../assets//imgs/首页/餐边柜.png" alt="">
+          <p>——北欧原木色——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="../assets//imgs/首页/图五.png" alt="">
+          <p>——北欧阳台座椅——</p>
+          <span><ion-icon name="md-star-half"></ion-icon></span>
+        </li>
+        <li>
+          <img src="../assets//imgs/首页/图六.png" alt="">
+          <p>——北欧原木储物架—— </p>
+          <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
+        </li>
+        
+    </ul>
+
+  
+
+
+
+  <!-- <ion-slides autoplay="1000" pager="true" loop="true" class="sli">
+    <ion-slide>
+      <img src="../assets/imgs/首页/中心背景.png"><img>
+    </ion-slide>
+    <ion-slide>
+      <img src="../assets/imgs/首页/茶几.png"><img>
+    </ion-slide>
+    <ion-slide>
+      <img src="../assets/imgs/首页/置物架.png"><img>
+    </ion-slide>
+    <ion-slide>
+      <img src="../assets/imgs/首页/书架.png"><img>
+    </ion-slide>
+  </ion-slides>
+
+  <p class="tuijian">热|门|推|荐</p> -->
+  <!-- <img src="../../assets/imgs/首页/HOT recommendation.png"> -->
+  <!-- <ion-row class="wenzi">
+      <img src="../../assets/imgs/首页/文字.png">
+  </ion-row>
+<ion-grid>
+    <ion-row>
+        <ion-col col-6>
+          <img src="../assets/imgs/首页/餐边柜.png"><img>
+        </ion-col>
+        <ion-col col-6>
+          <img src="../assets/imgs/首页/置物架.png"><img>
+          </ion-col>
+          <ion-col col-6>
+            <img src="../assets/imgs/首页/书架.png"><img>
+           </ion-col>
+           <ion-col col-6>
+            <img src="../assets/imgs/首页/茶几.png"><img>
+         </ion-col>
+      </ion-row>
+</ion-grid> -->
+
+
+  <!-- <b #ac></b>
+  <input type="text" #inp>
+  <button ion-button block (click)=goSub()>跳转到B</button>
+  <button ion-button block (click)=goSubZhuce()>跳转到注册界面</button>
+
+  <ion-segment [(ngModel)]="icons" color="secondary">
+      <ion-segment-button value="camera">
+        <ion-icon name="camera"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="bookmark">
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="icons">
+      <div *ngSwitchCase="'camera'"> -->
+          <!-- //如果不加单引号，就默认camera是变量 -->
+        <!-- 这是camera
+      </div>
+      <div *ngSwitchCase="'bookmark'">
+          这是bookmark
+        </div>
+    </div> -->
+</ion-content>

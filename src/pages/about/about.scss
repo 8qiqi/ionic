@@ -1,0 +1,52 @@
+page-about {
+    .search{
+        width:80%;
+        text-align: center;
+        height: 25px;
+        line-height: 25px;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+    .cimg{
+        height:auto;
+        img{
+            width: 100%;
+        }
+        margin-top: 10px;
+    }
+    .navList{
+        padding-left: 0!important;
+        margin: 0;
+        height: 44px;
+        line-height: 44px;
+        // .first{
+        //     border-bottom:2px solid #ffdb2c;
+        // }
+        li{
+            height: 44px;
+            text-align: center;
+            float: left;
+            width: 20%;
+        }
+    }
+    .goods{
+        padding: 0;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        li{
+            width: 45%;
+            float: left;
+            margin: 5px 0 5px 3%;
+            float: left;
+        }
+    }
+    .quanbu{
+        letter-spacing: 5px;
+    //    .funnel{
+    //        position: relative;
+    //        margin-right: 100px;
+    //    }
+    }
+}
