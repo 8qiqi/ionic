@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { ModalController} from 'ionic-angular';
+import { AddPage } from '../add/add';
 /**
  * Generated class for the BPage page.
  *
@@ -14,11 +16,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BPage {
   items = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient) {
-    for (let i = 0; i < 30; i++) {
-      this.items.push( this.items.length );
-    }
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient,public modalCtrl: ModalController) {
+    // for (let i = 0; i < 30; i++) {
+    //   this.items.push( this.items.length );
+    // }
   }
+  ionViewDidLoad(){
+    let profileModal = this.modalCtrl.create(AddPage);
+      profileModal.present();
+  }
+  // presentProfileModal() {
+  //   let profileModal = this.modalCtrl.create(AddPage);
+  //   profileModal.present();
+  // }
 
   // ionViewDidLoad() {
   //   console.log(this.navParams.get('id'));

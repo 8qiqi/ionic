@@ -11,15 +11,18 @@ page-a {
     //     border: 1px solid black;
     // }
     .dingdan{
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(155, 147, 147, 0.5);
         width: 100%;
         height: 50px;
         line-height: 60px;
         position: relative;
-        margin-top: -15px;
+        margin-top: -5px;
         .chakan{
-            position: relative;
-            margin-left: 200px;
+            // position: relative;
+            // margin-krig: 200px;
+            // margin-right: 0;
+            // display: block;
+            float: right;
         }
     }
     .content{
@@ -58,5 +61,11 @@ page-a {
             font-size: 1.5em;
             text-align: center;
         }
+    }
+    .touxiang{
+        width: 100%;
+    }
+    .hovercol:hover{
+        background-color: #ffdb2c;
     }
 }

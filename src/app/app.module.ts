@@ -18,6 +18,11 @@ import { JiajvPage } from '../pages/jiajv/jiajv';
 import { ComponentsModule } from '../components/components.module';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AddPage } from '../pages/add/add';
+import { ShezhiyePage } from '../pages/shezhiye/shezhiye';
+import { SousuoPage } from '../pages/sousuo/sousuo';
+import { DingdanPage } from '../pages/dingdan/dingdan';
+import { DengluPage } from '../pages/denglu/denglu';
 //HttpClientModule是引入的请求的模块,在下面的imports中也要引入
 @NgModule({
   declarations: [
@@ -29,14 +34,19 @@ import { HttpClientModule } from '@angular/common/http';
     APage,
     BPage,
     ZhucePage,
-    JiajvPage
+    JiajvPage,
+    AddPage,
+    ShezhiyePage,
+    SousuoPage,
+    DingdanPage,
+    DengluPage
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
     IonicModule.forRoot(MyApp,{
       backButtonText: '',
-      tabsHideOnSubPages: false
+      tabsHideOnSubPages: true
       //是否隐藏子页面上的选项卡
     }),
     HttpClientModule
@@ -51,7 +61,12 @@ import { HttpClientModule } from '@angular/common/http';
     APage,
     BPage,
     ZhucePage,
-    JiajvPage
+    JiajvPage,
+    AddPage,
+    ShezhiyePage,
+    SousuoPage,
+    DingdanPage,
+    DengluPage
   ],
   providers: [
     StatusBar,

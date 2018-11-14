@@ -16,3 +16,18 @@ ul,li{
       width: 25%;
   }
 }
+.ion-ios-add-circle-outline:before{
+  color: #ffdb2c;
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon{
+  color: #ffdb2c!important;
+}
+
+// .ion-ios-add-circle-outline:before{
+//     font-size: 55px;
+//     color: #ffdb2c;
+// }
+.ion-md-add-circle:before{
+  font-size: 55px;
+   color: #ffdb2c;
+}

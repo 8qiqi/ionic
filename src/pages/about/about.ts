@@ -6,7 +6,11 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'about.html'
 })
 export class AboutPage {
-
+  arr=["卧室","餐厅","书房","门厅"];
+  isActive=0;
+ isClick(i){
+   this.isActive=i;
+ }
   constructor(public navCtrl: NavController) {
 
   }

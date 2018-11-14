@@ -3,16 +3,53 @@ page-b {
     //     height: 200px;
     //     border: 1px solid red;
     // }
-    ion-scroll{
-        height: 50px;
-        white-space: nowrap;
-        //不折行
-        span{
-            // float: left;
-            display: inline-block;
-            width: 100px;
+    // ion-scroll{
+    //     height: 50px;
+    //     white-space: nowrap;
+    //     //不折行
+    //     span{
+    //         // float: left;
+    //         display: inline-block;
+    //         width: 100px;
+    //         text-align: center;
+    //     }
+    //     //span是行内样式，无法设置宽高，设置成块元素（block）又会浮动，所以设置成行内块元素
+    // }
+    .goods{
+        background-color: #ffdb2c;
+        ul{
+            padding: 0px;
+            position: relative;
+            margin-top: 40%;
+        }  
+        ul li{
+            float: left;
+            width: 40%;
+            margin-left: 6%;
+            margin-top:10%;
             text-align: center;
+            .picture{
+                display: block;
+                margin-left: 20%;
+                border-radius: 50%;
+                width: 60%;
+                height: 100%;
+                background: grey;
+                img{
+                    width:50%;
+                }
+            }
+           .picture2{
+                background: white;
+           }
+           .text1{
+               font-size: 1.5em;
+           }
+           .text2{
+               position: relative;
+               margin-top:80px;
+               color: gray;
+           }
         }
-        //span是行内样式，无法设置宽高，设置成块元素（block）又会浮动，所以设置成行内块元素
     }
 }

@@ -1,72 +1,129 @@
 <ion-header>
   <ion-navbar color="yel">
       <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
+        <ion-icon name="md-options"></ion-icon>
       </button>
     <ion-title text-center><img src="../../assets/imgs/首页/桔家.png" style="width:15%;height:15%"></ion-title>
       <button ion-button icon-only menuToggle end>
-        <ion-icon name="search"></ion-icon>
+        <ion-icon name="md-search"></ion-icon>
       </button> 
   </ion-navbar>
 </ion-header>
 <!-- <b #ac></b> -->
 <ion-content>
   <ul class="navList">
-    <li class="first">推荐</li>
-    <li (click)=goTuijian()>家居</li>
-    <li>餐厨</li>
-    <li>床上用品</li>
+    <!-- <li (click)="isClick(0)" [class.first]="isActive==0">推荐</li>
+    <li  (click)="isClick(1)" [class.first]="isActive==1">家居</li>
+    <li (click)="isClick(2)" [class.first]="isActive==2">餐厨</li>
+    <li (click)="isClick(3)" [class.first]="isActive===3">床上用品</li> -->
+    <!-- //isActive是一个共有的变量，随便起， -->
+    <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>
   </ul>
-  <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
-    <ion-slide>
-      <img src="assets/imgs/首页/中心背景.png" alt="">
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/imgs/首页/中心背景.png" alt="">
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/imgs/首页/中心背景.png" alt="">
-    </ion-slide>
-  </ion-slides>
-  <div class="subtitle">
-      <h3 text-center>热|门|推|荐</h3>
-      <p text-center>RECOMMENDATION</p>
-  </div>
-  <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
-  <ul class="goods">
-        <li>
-          <img src="../assets/imgs/首页/置物架.png" alt="">
-          <p>——北欧原木色——</p>
-          <span><ion-icon name="md-star-half"></ion-icon></span>
-        </li>
-        <li>
-          <img src="../assets/imgs/首页/茶几.png" alt="">
-          <p>——简约黑檀木茶几——</p>
-          <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
-        </li>
-        <li>
-          <img src="../assets/imgs/首页/书架.png" alt="">
-          <p>——北欧白橡木书架——</p>
-          <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
-        </li>
-        <li>
-          <img src="../assets//imgs/首页/餐边柜.png" alt="">
-          <p>——北欧原木色——</p>
-          <span><ion-icon name="md-star-half"></ion-icon></span>
-        </li>
-        <li>
-          <img src="../assets//imgs/首页/图五.png" alt="">
-          <p>——北欧阳台座椅——</p>
-          <span><ion-icon name="md-star-half"></ion-icon></span>
-        </li>
-        <li>
-          <img src="../assets//imgs/首页/图六.png" alt="">
-          <p>——北欧原木储物架—— </p>
-          <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
-        </li>
+  <div [ngSwitch]="isActive">
+    <div *ngSwitchCase="0">
+        <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+            <ion-slide>
+              <img src="assets/imgs/首页/中心背景.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/首页/中心背景.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/首页/中心背景.png" alt="">
+            </ion-slide>
+          </ion-slides>
+          <div class="subtitle">
+              <h3 text-center>热|门|推|荐</h3>
+              <p text-center>RECOMMENDATION</p>
+          </div>
+          <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
+          <ul class="goods">
+                <li>
+                  <img src="../assets/imgs/首页/置物架.png" alt="">
+                  <p>——北欧原木色——</p>
+                  <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                  <img src="../assets/imgs/首页/茶几.png" alt="">
+                  <p>——简约黑檀木茶几——</p>
+                  <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
+                </li>
+                <li>
+                  <img src="../assets/imgs/首页/书架.png" alt="">
+                  <p>——北欧白橡木书架——</p>
+                  <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
+                </li>
+                <li>
+                  <img src="../assets//imgs/首页/餐边柜.png" alt="">
+                  <p>——北欧原木色——</p>
+                  <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                  <img src="../assets//imgs/首页/图五.png" alt="">
+                  <p>——北欧阳台座椅——</p>
+                  <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                  <img src="../assets//imgs/首页/图六.png" alt="">
+                  <p>——北欧原木储物架—— </p>
+                  <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
+                </li>
+                
+            </ul>
         
-    </ul>
-
+    </div>
+    <div *ngSwitchCase="1" class="jiajv">
+          <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+              <ion-slide>
+                <img src="assets/imgs/家居页/中心背景.png" alt="">
+              </ion-slide>
+              <ion-slide>
+                <img src="assets/imgs/家居页/中心背景.png" alt="">
+              </ion-slide>
+              <ion-slide>
+                <img src="assets/imgs/家居页/中心背景.png" alt="">
+              </ion-slide>
+            </ion-slides>
+            <ul class="lists1">
+              <li><img src="../assets/imgs/家居页/客厅.png"></li>
+              <li><img src="../assets/imgs/家居页/门厅.png"></li>
+              <li><img src="../assets/imgs/家居页/书房.png"></li>
+            </ul>
+            <div class="subtitle">
+                <h3 text-center>桔|子|家|居</h3>
+                <p text-center>Orange household</p>
+            </div>
+            <ul class="lists2">
+              <li>
+                <img src="../assets/imgs/家居页/花几.png">
+                <p>——欧式全实木花几 RMB600——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../assets/imgs/家居页/早餐桌.png">
+                <p>——现代简约早餐桌 RMB450——</p>
+                <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../assets/imgs/家居页/图三.png">
+                <p>——简约现代书桌——</p>
+                <span><ion-icon name="md-star-half" class="black"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../assets/imgs/家居页/图四.png">
+                <p>——精致典雅餐桌——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+            </ul>
+    </div>
+    <div *ngSwitchCase="2">
+      这是第二页
+    </div>
+    <div *ngSwitchCase="3">
+      这是第三页
+   </div>
+  </div>
+  
   
 
 
